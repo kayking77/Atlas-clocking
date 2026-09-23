@@ -1,0 +1,12 @@
+# secrets — never commit these
+.env
+mobile/.env
+admin/api/config.php
+atlas-private/
+
+# build output
+node_modules/
+mobile/.expo/
+mobile/dist/
+*.log
+.DS_Store
