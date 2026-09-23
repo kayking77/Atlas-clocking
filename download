@@ -1,0 +1,10 @@
+# Only staff.php is reachable in this folder.
+<FilesMatch "^(config|config\.sample)\.php$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
+
+# Pass the Authorization header through to PHP on Apache/LiteSpeed (Hostinger)
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
